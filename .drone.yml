@@ -1,3 +1,8 @@
+---
+type: pipeline
+kind: docker
+name: default
+
 steps:
     - name: build
       image: plugins/docker
