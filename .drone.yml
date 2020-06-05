@@ -1,0 +1,4 @@
+steps:
+    - name: build
+      image: plugins/docker
+      auto_tag: true
