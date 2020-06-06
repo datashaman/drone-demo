@@ -18,8 +18,8 @@ steps:
       - name: aws
         path: /root/.aws
     environment:
-      - AWS_DEFAULT_REGION=eu-west-1
-      - AWS_PROFILE=rimu
+      AWS_DEFAULT_REGION: eu-west-1
+      AWS_PROFILE: rimu
     settings:
       repo: drone-demo
       registry: 135132174985.dkr.ecr.eu-west-1.amazonaws.com
