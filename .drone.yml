@@ -1,6 +1,6 @@
 ---
-type: pipeline
-kind: docker
+kind: pipeline
+type: docker
 name: default
 
 steps:
