@@ -26,7 +26,7 @@ steps:
 volumes:
   - name: aws
     host:
-      path: $HOME/.aws
+      path: /home/marlinf/.aws
   - name: docker
     host:
       path: /var/run/docker.sock
