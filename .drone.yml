@@ -5,7 +5,21 @@ name: default
 
 steps:
   - name: build
-    image: plugins/docker
+    image: docker
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    commands:
+      - docker build -t drone-demo:latest
+
+  - name: publish
+    image: plugins/ecr
     settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
       repo: drone-demo
-      auto_tag: true
+      registry: 135132174985.dkr.ecr.eu-west-1.amazonaws.com
+      tags:
+        - latest
