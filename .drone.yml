@@ -23,3 +23,8 @@ steps:
       registry: 135132174985.dkr.ecr.eu-west-1.amazonaws.com
       tags:
         - latest
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
