@@ -10,7 +10,7 @@ steps:
       - name: docker
         path: /var/run/docker.sock
     commands:
-      - docker build -t drone-demo:latest
+      - docker build -t drone-demo:latest .
 
   - name: publish
     image: plugins/ecr
