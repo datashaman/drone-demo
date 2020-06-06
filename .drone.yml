@@ -4,6 +4,8 @@ type: docker
 name: default
 
 steps:
-    - name: build
-      image: plugins/docker
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: drone-demo
       auto_tag: true
