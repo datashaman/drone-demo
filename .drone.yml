@@ -14,17 +14,19 @@ steps:
 
   - name: publish
     image: plugins/ecr
+    volumes:
+      - name: aws
+        path: /root/.aws
     settings:
-      access_key:
-        from_secret: aws_access_key_id
-      secret_key:
-        from_secret: aws_secret_access_key
       repo: drone-demo
       registry: 135132174985.dkr.ecr.eu-west-1.amazonaws.com
       tags:
         - latest
 
 volumes:
+  - name: aws
+    host:
+      path: $HOME/.aws
   - name: docker
     host:
       path: /var/run/docker.sock
